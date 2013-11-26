@@ -57,12 +57,15 @@ http://0to255.com/
 @alert-blue:        #d5edf8;
 
 @black:             #000;
-@white:             #fff;
+@white:             #FFF;
 
-@bones-pink:        #f01d4f;
-@bones-blue:        #1990db;
+@primary-accent-color:  rgb(64, 97, 146);
+@secondary-accent-color:        #1990db;
 
-@link-color:        @bones-pink;
+@nav-item-background-color: @white;
+@nav-border-color: rgb(63, 115, 85);
+
+@link-color:        @primary-accent-color;
 @link-hover:        darken(@link-color, 9%);
 
 /*
@@ -78,6 +81,10 @@ TYPOGRAPHY
 
 @sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
 @serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+
+@body-font-family: @sans-serif;
+@heading-font-family: @sans-serif;
+@secondary-font-family: @sans-serif;
 
 
 /* 	To embed your own fonts, use this syntax
@@ -215,9 +222,9 @@ BUTTONS
 *********************/
 
 .button, .button:visited {
-	border: 1px solid darken(@bones-pink, 13%);
-	border-top-color: darken(@bones-pink, 7%);
-	border-left-color: darken(@bones-pink, 7%);
+	border: 1px solid darken(@primary-accent-color, 13%);
+	border-top-color: darken(@primary-accent-color, 7%);
+	border-left-color: darken(@primary-accent-color, 7%);
 	padding: 4px 12px;
 	color: @white;
 	display: inline-block;
@@ -230,33 +237,33 @@ BUTTONS
 	line-height: 21px;
 	.transition();
 	.border-radius(4px);
-	.css-gradient(@bones-pink,darken(@bones-pink, 5%));
+	.css-gradient(@primary-accent-color,darken(@primary-accent-color, 5%));
 
 	&:hover, &:focus {
 		color: @white;
-	  border: 1px solid darken(@bones-pink, 13%);
-	  border-top-color: darken(@bones-pink, 20%);
-	 	border-left-color: darken(@bones-pink, 20%);
-		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
+	  border: 1px solid darken(@primary-accent-color, 13%);
+	  border-top-color: darken(@primary-accent-color, 20%);
+	 	border-left-color: darken(@primary-accent-color, 20%);
+		.css-gradient(darken(@primary-accent-color, 5%),darken(@primary-accent-color, 10%));
 	}
 	
 	&:active {
-		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
+		.css-gradient(darken(@primary-accent-color, 5%),@primary-accent-color);
 	}	
 }
 
 .blue-button, .blue-button:visited {
-	border-color: darken(@bones-blue, 10%);
-	text-shadow: 0 1px 1px darken(@bones-blue, 10%);
-	.css-gradient( @bones-blue, darken(@bones-blue, 5%) );
-	-webkit-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-       -moz-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-   	        box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
+	border-color: darken(@secondary-accent-color, 10%);
+	text-shadow: 0 1px 1px darken(@secondary-accent-color, 10%);
+	.css-gradient( @secondary-accent-color, darken(@secondary-accent-color, 5%) );
+	-webkit-box-shadow: inset 0 0 3px lighten(@secondary-accent-color, 16%);
+       -moz-box-shadow: inset 0 0 3px lighten(@secondary-accent-color, 16%);
+   	        box-shadow: inset 0 0 3px lighten(@secondary-accent-color, 16%);
 	&:hover, &:focus {
-		border-color: darken(@bones-blue, 15%);
-		.css-gradient( darken(@bones-blue, 4%), darken(@bones-blue, 10%) );
+		border-color: darken(@secondary-accent-color, 15%);
+		.css-gradient( darken(@secondary-accent-color, 4%), darken(@secondary-accent-color, 10%) );
 	}
 	&:active {
-		.css-gradient( darken(@bones-blue, 5%), @bones-blue );
+		.css-gradient( darken(@secondary-accent-color, 5%), @secondary-accent-color );
 	}
 }

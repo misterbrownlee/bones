@@ -38,10 +38,11 @@ html, body {
 	/* height: 100%; */
 }
 body {
-	font-family: @serif;
+	font-family: @body-font-family;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	background-color: @white;
+	color: #000;
 }
 
 /********************
@@ -128,7 +129,7 @@ a, a:visited {
 ******************************************************************/
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
-	font-family: @sans-serif;
+	font-family: @heading-font-family;
 	text-rendering: optimizelegibility;
 	font-weight: 400;
 	/*
@@ -177,17 +178,15 @@ h5, .h5 {
 	#inner-header {}
 
 	#logo {}
-	
+
 	nav {
-		div.top-nav {
-			ul {
-				li {	
-					a {}
-	
-					&:first-child {}
-	
-					&:last-child {}
-				}
+		ul.nav {
+			li {
+				a {}
+
+				&:first-child {}
+
+				&:last-child {}
 			}
 		}
 	}
@@ -206,8 +205,12 @@ and more scalable.
 */
 
 .nav {
-	border: 1px solid #ccc;
+	border: 1px solid @nav-border-color;
 	border-bottom: 0;
+
+	ul {
+		margin: 0;
+	}
 
 	li {
 
@@ -215,8 +218,8 @@ and more scalable.
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
-			background-color: #eee;
-			border-bottom: 1px solid #ccc;
+			background-color: @nav-item-background-color;
+			border-bottom: 1px solid @nav-border-color;
 
 			/*
 			remember this is for mobile ONLY, so there's no need
